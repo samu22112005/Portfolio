@@ -64,6 +64,16 @@ export interface SocialLinks {
   resume: string;
 }
 
+export interface SkillCategoryGroup {
+  id: string;
+  title: string;
+  description: string;
+  iconName: string;
+  items: { name: string; iconName?: string }[];
+  colSpanDesktop: string;
+  isPillsOnly?: boolean;
+}
+
 export interface PortfolioData {
   personal: {
     name: string;
@@ -78,6 +88,7 @@ export interface PortfolioData {
   social: SocialLinks;
   metrics: Metric[];
   skills: Skill[];
+  skillCategories: SkillCategoryGroup[];
   projects: Project[];
   experience: ExperienceItem[];
   education: EducationItem[];
@@ -115,40 +126,97 @@ export const portfolioData: PortfolioData = {
     { label: "Internships & Projects", value: "6+", description: "Real-world Apps & AI Solutions" }
   ],
 
+  skillCategories: [
+    {
+      id: "frontend",
+      title: "FRONTEND DEVELOPMENT",
+      description: "Building responsive and interactive interfaces.",
+      iconName: "Layout",
+      colSpanDesktop: "lg:col-span-4",
+      items: [
+        { name: "React.js", iconName: "Code2" },
+        { name: "JavaScript", iconName: "FileCode" },
+        { name: "TypeScript", iconName: "FileCode" },
+        { name: "HTML", iconName: "Code2" },
+        { name: "CSS", iconName: "Palette" },
+        { name: "Tailwind CSS", iconName: "Sparkles" }
+      ]
+    },
+    {
+      id: "backend",
+      title: "BACKEND & APIs",
+      description: "Building practical backend systems and integrations.",
+      iconName: "Server",
+      colSpanDesktop: "lg:col-span-4",
+      items: [
+        { name: "Python", iconName: "Cpu" },
+        { name: "Flask", iconName: "Server" },
+        { name: "REST APIs", iconName: "Zap" },
+        { name: "Firebase", iconName: "Cloud" }
+      ]
+    },
+    {
+      id: "tools",
+      title: "TOOLS",
+      description: "Tools I use to design, build and collaborate.",
+      iconName: "Wrench",
+      colSpanDesktop: "lg:col-span-4",
+      items: [
+        { name: "Git", iconName: "GitBranch" },
+        { name: "GitHub", iconName: "GitBranch" },
+        { name: "VS Code", iconName: "FileCode" },
+        { name: "Figma", iconName: "Palette" }
+      ]
+    },
+    {
+      id: "ai",
+      title: "AI & EMERGING TECH",
+      description: "Exploring AI-powered tools and intelligent experiences.",
+      iconName: "Sparkles",
+      colSpanDesktop: "lg:col-span-5",
+      items: [
+        { name: "Generative AI", iconName: "Sparkles" },
+        { name: "Prompt Engineering", iconName: "Zap" },
+        { name: "AI/ML Basics", iconName: "Cpu" }
+      ]
+    },
+    {
+      id: "strengths",
+      title: "CORE STRENGTHS",
+      description: "Mindset & core engineering competencies.",
+      iconName: "Brain",
+      colSpanDesktop: "lg:col-span-7",
+      isPillsOnly: true,
+      items: [
+        { name: "Problem Solving" },
+        { name: "Data Structures & Algorithms" },
+        { name: "Object-Oriented Programming" },
+        { name: "Creativity" },
+        { name: "Quick Learning" },
+        { name: "Team Collaboration" },
+        { name: "Communication" }
+      ]
+    }
+  ],
+
   skills: [
-    // Programming & Core
-    { name: "Java", category: "Backend & Cloud", proficiency: 70, iconName: "Code2", featured: true },
-    { name: "Python", category: "AI & Core CS", proficiency: 65, iconName: "Cpu", featured: true },
-    { name: "JavaScript", category: "Frontend", proficiency: 70, iconName: "FileCode", featured: true },
-    { name: "SQL", category: "Backend & Cloud", proficiency: 65, iconName: "Database", featured: true },
-    { name: "Object-Oriented Programming", category: "AI & Core CS", proficiency: 70, iconName: "Layers", featured: true },
-    { name: "Problem Solving", category: "AI & Core CS", proficiency: 70, iconName: "Sparkles", featured: true },
-
-    // Frontend
-    { name: "HTML", category: "Frontend", proficiency: 80, iconName: "Code2", featured: true },
-    { name: "CSS", category: "Frontend", proficiency: 75, iconName: "Palette", featured: true },
-    { name: "React.js", category: "Frontend", proficiency: 65, iconName: "Layout", featured: true },
-    { name: "Tailwind CSS", category: "Frontend", proficiency: 65, iconName: "Sparkles", featured: true },
-    { name: "Next.js", category: "Frontend", proficiency: 55, iconName: "Layers" },
-
-    // Backend & Web
+    { name: "React.js", category: "Frontend", proficiency: 65, iconName: "Code2" },
+    { name: "JavaScript", category: "Frontend", proficiency: 70, iconName: "FileCode" },
+    { name: "TypeScript", category: "Frontend", proficiency: 60, iconName: "FileCode" },
+    { name: "HTML", category: "Frontend", proficiency: 80, iconName: "Code2" },
+    { name: "CSS", category: "Frontend", proficiency: 75, iconName: "Palette" },
+    { name: "Tailwind CSS", category: "Frontend", proficiency: 65, iconName: "Sparkles" },
+    { name: "Python", category: "Backend & Cloud", proficiency: 65, iconName: "Cpu" },
     { name: "Flask", category: "Backend & Cloud", proficiency: 55, iconName: "Server" },
     { name: "REST APIs", category: "Backend & Cloud", proficiency: 55, iconName: "Zap" },
     { name: "Firebase", category: "Backend & Cloud", proficiency: 40, iconName: "Cloud" },
-
-    // AI & Core CS
-    { name: "Prompt Engineering", category: "AI & Core CS", proficiency: 70, iconName: "Zap" },
-    { name: "Generative AI", category: "AI & Core CS", proficiency: 65, iconName: "Sparkles" },
-    { name: "Data Structures & Algorithms", category: "AI & Core CS", proficiency: 60, iconName: "Workflow" },
-    { name: "AI/ML Basics", category: "AI & Core CS", proficiency: 45, iconName: "Cpu" },
-
-    // Tools & Frameworks
-    { name: "VS Code", category: "Tools & Frameworks", proficiency: 80, iconName: "FileCode", featured: true },
-    { name: "GitHub", category: "Tools & Frameworks", proficiency: 75, iconName: "GitBranch", featured: true },
     { name: "Git", category: "Tools & Frameworks", proficiency: 70, iconName: "GitBranch" },
-    { name: "Android Studio", category: "Tools & Frameworks", proficiency: 60, iconName: "Box" },
-    { name: "XML Layouts", category: "Tools & Frameworks", proficiency: 60, iconName: "Code2" },
-    { name: "Maven", category: "Tools & Frameworks", proficiency: 40, iconName: "Workflow" }
+    { name: "GitHub", category: "Tools & Frameworks", proficiency: 75, iconName: "GitBranch" },
+    { name: "VS Code", category: "Tools & Frameworks", proficiency: 80, iconName: "FileCode" },
+    { name: "Figma", category: "Tools & Frameworks", proficiency: 65, iconName: "Palette" },
+    { name: "Generative AI", category: "AI & Core CS", proficiency: 65, iconName: "Sparkles" },
+    { name: "Prompt Engineering", category: "AI & Core CS", proficiency: 70, iconName: "Zap" },
+    { name: "AI/ML Basics", category: "AI & Core CS", proficiency: 45, iconName: "Cpu" }
   ],
 
   projects: [
