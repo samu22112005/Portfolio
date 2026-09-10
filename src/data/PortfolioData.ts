@@ -69,7 +69,7 @@ export interface SkillCategoryGroup {
   title: string;
   description: string;
   iconName: string;
-  items: { name: string; iconName?: string }[];
+  items: { name: string; iconName?: string; imageIcon?: string }[];
   colSpanDesktop: string;
   isPillsOnly?: boolean;
 }
@@ -134,12 +134,12 @@ export const portfolioData: PortfolioData = {
       iconName: "Layout",
       colSpanDesktop: "lg:col-span-4",
       items: [
-        { name: "React.js", iconName: "Code2" },
-        { name: "JavaScript", iconName: "FileCode" },
-        { name: "TypeScript", iconName: "FileCode" },
-        { name: "HTML", iconName: "Code2" },
-        { name: "CSS", iconName: "Palette" },
-        { name: "Tailwind CSS", iconName: "Sparkles" }
+        { name: "React.js", imageIcon: "/skills/react.png" },
+        { name: "JavaScript", imageIcon: "/skills/javascript.png" },
+        { name: "TypeScript", imageIcon: "/skills/typescript.png" },
+        { name: "HTML", imageIcon: "/skills/html.png" },
+        { name: "CSS", imageIcon: "/skills/css.png" },
+        { name: "Tailwind CSS", imageIcon: "/skills/tailwind.png" }
       ]
     },
     {
@@ -149,10 +149,10 @@ export const portfolioData: PortfolioData = {
       iconName: "Server",
       colSpanDesktop: "lg:col-span-4",
       items: [
-        { name: "Python", iconName: "Cpu" },
-        { name: "Flask", iconName: "Server" },
-        { name: "REST APIs", iconName: "Zap" },
-        { name: "Firebase", iconName: "Cloud" }
+        { name: "Python", imageIcon: "/skills/python.png" },
+        { name: "Flask", imageIcon: "/skills/flask.png" },
+        { name: "REST APIs", imageIcon: "/skills/rest_apis.png" },
+        { name: "Firebase", imageIcon: "/skills/firebase.png" }
       ]
     },
     {
@@ -162,10 +162,10 @@ export const portfolioData: PortfolioData = {
       iconName: "Wrench",
       colSpanDesktop: "lg:col-span-4",
       items: [
-        { name: "Git", iconName: "GitBranch" },
-        { name: "GitHub", iconName: "GitBranch" },
-        { name: "VS Code", iconName: "FileCode" },
-        { name: "Figma", iconName: "Palette" }
+        { name: "Git", imageIcon: "/skills/git.png" },
+        { name: "GitHub", imageIcon: "/skills/github.png" },
+        { name: "VS Code", imageIcon: "/skills/vscode.png" },
+        { name: "Figma", imageIcon: "/skills/figma.png" }
       ]
     },
     {
@@ -175,9 +175,9 @@ export const portfolioData: PortfolioData = {
       iconName: "Sparkles",
       colSpanDesktop: "lg:col-span-5",
       items: [
-        { name: "Generative AI", iconName: "Sparkles" },
-        { name: "Prompt Engineering", iconName: "Zap" },
-        { name: "AI/ML Basics", iconName: "Cpu" }
+        { name: "Generative AI", imageIcon: "/skills/generative_ai.png" },
+        { name: "Prompt Engineering", imageIcon: "/skills/prompt_engineering.png" },
+        { name: "AI/ML Basics", imageIcon: "/skills/aiml_basics.png" }
       ]
     },
     {
@@ -189,8 +189,8 @@ export const portfolioData: PortfolioData = {
       isPillsOnly: true,
       items: [
         { name: "Problem Solving" },
-        { name: "Data Structures & Algorithms" },
-        { name: "Object-Oriented Programming" },
+        { name: "Data Structures & Algorithms", imageIcon: "/skills/dsa.png" },
+        { name: "Object-Oriented Programming", imageIcon: "/skills/oop.png" },
         { name: "Creativity" },
         { name: "Quick Learning" },
         { name: "Team Collaboration" },

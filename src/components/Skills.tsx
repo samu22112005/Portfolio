@@ -133,24 +133,39 @@ export const Skills: React.FC = () => {
                         key={i}
                         whileHover={{ scale: 1.05, y: -2 }}
                         transition={{ type: 'spring', stiffness: 300 }}
-                        className="px-3 py-1.5 rounded-full bg-indigo-950/50 border border-indigo-500/25 text-xs font-mono text-indigo-300 hover:text-cyan-300 hover:border-cyan-400/40 hover:bg-indigo-900/60 transition-all cursor-default shadow-sm"
+                        className="px-3.5 py-1.5 rounded-full bg-indigo-950/50 border border-indigo-500/25 text-xs font-mono text-indigo-300 hover:text-cyan-300 hover:border-cyan-400/40 hover:bg-indigo-900/60 transition-all cursor-default shadow-sm flex items-center gap-2"
                       >
-                        {item.name}
+                        {item.imageIcon && (
+                          <img
+                            src={item.imageIcon}
+                            alt={item.name}
+                            className="w-4 h-4 object-contain"
+                          />
+                        )}
+                        <span>{item.name}</span>
                       </motion.span>
                     ))}
                   </div>
                 ) : (
                   /* Compact Icon + Name Chips for Tech Stack */
-                  <div className="flex flex-wrap gap-2 pt-1">
+                  <div className="flex flex-wrap gap-2.5 pt-1">
                     {cat.items.map((item, i) => (
                       <motion.div
                         key={i}
                         whileHover={{ scale: 1.05, y: -2 }}
                         transition={{ type: 'spring', stiffness: 300 }}
-                        className="px-3 py-2 rounded-xl bg-slate-900/80 border border-white/10 hover:border-indigo-500/40 text-xs font-medium text-slate-200 hover:text-white transition-all flex items-center gap-2 group/chip cursor-default shadow-sm"
+                        className="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-white/10 hover:border-indigo-500/40 text-xs font-medium text-slate-200 hover:text-white transition-all flex items-center gap-2.5 group/chip cursor-default shadow-md hover:shadow-indigo-500/20"
                       >
-                        {getTechIcon(item.iconName)}
-                        <span className="font-sans text-xs">{item.name}</span>
+                        {item.imageIcon ? (
+                          <img
+                            src={item.imageIcon}
+                            alt={item.name}
+                            className="w-5 h-5 object-contain group-hover/chip:scale-110 transition-transform duration-300 drop-shadow-[0_0_6px_rgba(99,102,241,0.4)]"
+                          />
+                        ) : (
+                          getTechIcon(item.iconName)
+                        )}
+                        <span className="font-sans text-xs font-semibold">{item.name}</span>
                       </motion.div>
                     ))}
                   </div>
