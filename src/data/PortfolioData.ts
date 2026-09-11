@@ -255,7 +255,7 @@ export const portfolioData: PortfolioData = {
       status: "Currently Building",
       description: "An AI-powered digital governance platform I am currently building to explore how AI can make government-related information and services more accessible and easier to navigate.",
       fullDetails: "JanSetu AI is an ongoing project currently in active development, exploring how AI models and accessible interface design can simplify citizen discovery of government schemes and public administration resources.",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+      image: "/projects/jansetu.jpg",
       category: "Creative Tech",
       technologies: ["Python", "Generative AI", "Web Technologies", "APIs"],
       githubUrl: "",
