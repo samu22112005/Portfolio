@@ -268,11 +268,11 @@ export const portfolioData: PortfolioData = {
       tagline: "Modern Web & AI Hackathon Showcase Project",
       description: "A project developed during Hacker House Goa 2026 / Builder Studio, focused on building with modern web technologies and AI.",
       fullDetails: "Prototyped during the high-energy Builder Studio hackathon in Goa, demonstrating rapid web engineering, AI API integrations, and intuitive frontend component architectures.",
-      image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1000&q=80",
+      image: "/projects/hhgoa.png",
       category: "Creative Tech",
       technologies: ["React", "Next.js", "AI Tools", "Tailwind CSS"],
       githubUrl: "https://github.com/samu22112005",
-      liveUrl: "https://github.com/samu22112005",
+      liveUrl: "https://hh-goabuilderstudio.vercel.app/",
       featured: true,
       metrics: "Hacker House Goa 2026 Hackathon"
     }
