@@ -240,11 +240,11 @@ export const portfolioData: PortfolioData = {
       tagline: "Interactive Drag & Drop Academic Scheduler",
       description: "An interactive academic scheduling system that manages teachers, classes, classrooms, and lecture information. It automatically generates optimized timetables and provides a Today View dashboard along with customized timetables for students, teachers, and classrooms.",
       fullDetails: "Developed with HTML, CSS, JavaScript, and Python backend algorithms. Solves complex timetable scheduling constraints without lecture conflicts, offering real-time drag-and-drop timetable modifications.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      image: "/projects/timetable.png",
       category: "Fullstack",
       technologies: ["Python", "JavaScript", "HTML", "CSS"],
       githubUrl: "https://github.com/samu22112005/TimeTable-Generator-Web-Application.git",
-      liveUrl: "https://github.com/samu22112005/TimeTable-Generator-Web-Application.git",
+      liveUrl: "https://samrudhikhopade.pythonanywhere.com/login",
       featured: true,
       metrics: "Automated Constraint Solver | Drag & Drop UI"
     },
